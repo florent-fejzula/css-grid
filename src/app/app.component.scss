@@ -1,0 +1,99 @@
+// First project
+.grid-even-columns {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: row;
+}
+
+.flow {
+    border: 1px solid black;
+}
+
+@media (min-width: 40em) {
+    .grid-even-columns {
+        // grid-auto-flow: column;
+        // grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 60em) {
+    .grid-even-columns {
+        // grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+// Second project
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+}
+
+.card {
+    border: 1px solid black;
+}
+
+.card:nth-child(1) {
+    grid-area: one;
+}
+
+.card:nth-child(2) {
+    grid-area: two;
+}
+
+.card:nth-child(3) {
+    grid-area: three;
+}
+
+.card:nth-child(4) {
+    grid-area: four;
+}
+
+.card:nth-child(5) {
+    grid-area: five;
+}
+
+@media (min-width: 40em) {
+    .grid {
+        grid-template-areas:
+        'one one'
+        'two five'
+        'three five'
+        'four four';
+    }
+}
+
+@media (min-width: 60em) {
+    .grid {
+        grid-template-areas:
+        'one one two five'
+        'three four four five';
+    }
+}
+
+// Standard grid
+// @media (min-width: 50em) {
+//     .grid {
+//         grid-template-columns: repeat(4, 1fr);
+//     }
+
+//     .colSpan2 {
+//         grid-column: span 2;
+//     }
+
+//     .card:last-child {
+//         grid-column-start: 4;
+//         grid-row: 1 / 3;
+//     }
+    
+//     .third {
+//         grid-column-start: 1;
+//         grid-row: 1 / 3;
+//     }
+// }
